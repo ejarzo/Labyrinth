@@ -26,6 +26,7 @@ public class MarbleController : MonoBehaviour
 
     void Update()
     {
+        // Update pitch of looped background sound to match marble's velocity
         float vMagnitude = sphereRb.velocity.magnitude;
         float pitch = (1 + vMagnitude) / 2;
         loopSound.pitch = pitch;
@@ -37,10 +38,10 @@ public class MarbleController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-
     {
         if (collision.transform.tag == "bounce")
         {
+            // Hard-coded because we know which way the bouncy wall is oriented
             sphereRb.AddForce(new Vector3(-10, 0), ForceMode.Impulse);
             bounceSound.Play();
         }
@@ -49,28 +50,22 @@ public class MarbleController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Win if we hit the green cube
         if (other.name == "WinCube")
         {
             WinText.SetActive(true);
             pressStartText.SetActive(true);
             winSound.Play();
             ResetPosition();
-           
         }
 
+        // Loss if we fall
         if (other.name == "GameOverCollider")
         {
             LossText.SetActive(true);
             pressStartText.SetActive(true);
             lossSound.Play();
             ResetPosition();
-        }
-
-        if (other.name == "BouncyWall")
-        {
-            Rigidbody rb = sphere.GetComponent<Rigidbody>();
-            //rb.AddForce(rb.velocity * -1);
-            rb.AddForce(new Vector3(10,10,10));
         }
     }
 }
