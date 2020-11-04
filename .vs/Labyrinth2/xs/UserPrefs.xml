@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{3D76BB6A-649C-0331-C786-26A21ACDC2AF}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameController.cs">
+    <Files>
+      <File FileName="Assets/MarbleController.cs" Line="33" Column="1" />
+      <File FileName="Assets/GameController.cs" Line="49" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d04495e2-f2f3-4cba-8f7f-37a2b4789a39" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
